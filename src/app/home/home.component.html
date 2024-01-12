@@ -1,0 +1,13 @@
+<p>home works!</p>
+
+<form>
+    <label>UserName:</label>
+    <input type="text" id="email" name="email" class="form-control" [(ngModel)]="model.email"/><br><br>
+    <label>Password:</label>
+    <input type="text" id="password" name="password" class="form-control" [(ngModel)]="model.password"/><br><br>
+    
+    <button type="submit" class="btn btn-primary" (click)="managerlogin()">Manager Login</button>&nbsp;&nbsp;
+    <button type="submit" class="btn btn-primary" (click)="managersignup()">Manager Signup</button>&nbsp;&nbsp;
+    <button type="submit" class="btn btn-primary" (click)="adminlogin()">Admin Login</button>&nbsp; &nbsp;
+</form>
+

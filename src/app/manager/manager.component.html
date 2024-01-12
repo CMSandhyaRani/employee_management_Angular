@@ -1,0 +1,66 @@
+<p> Manager Id</p>
+<input type="number" [(ngModel)]="managerid">
+<button type="submit" (click)="getmanager()">Submit</button>
+
+<p>{{posts|json}}</p>
+
+<p>Manager Name : {{post2.name}}</p><br>
+<p>Address :{{post2.address}}</p><br>
+<p>Department :{{post2.department}}</p><br>
+
+
+<div>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Date of Birth</th>
+                <th>Hire Date</th>
+                <th>Address</th>
+                <th>Department</th>
+                <th>Salary</th>
+                <th>Update</th>
+                <th>Delete Employee</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr *ngFor="let i of posts">
+                <th>{{i.id}}</th>
+                <td><input type="text" [(ngModel)]="i.first_name"/></td>
+                <td><input type="text" [(ngModel)]="i.last_name"/></td>
+                <td><input type="text" [(ngModel)]="i.date_of_birth"/></td>
+                <td><input type="text" [(ngModel)]="i.hire_date"/></td>
+                <td><input type="text" [(ngModel)]="i.address"/></td>
+                <td><input type="text" [(ngModel)]="i.department"/></td>
+                <td><input type="number" [(ngModel)]="i.salary"/></td>
+                
+                <td><button type="submit" (click)="update(i.id,i.first_name,i.last_name,i.date_of_birth,i.hire_date,i.address,i.department,i.salary)">Update</button></td>
+                <td><button type="submit" (click)="delete(i.id)">delete</button></td>
+            </tr>
+
+        
+   
+        <tr>
+        <td><input type="number" ></td>
+        <td><h3><input type="text" [(ngModel)]="model2.first_name"/></h3></td>
+        <td><h3><input type="text" [(ngModel)]="model2.last_name"/></h3></td>
+        <td><h3><input type="text" [(ngModel)]="model2.date_of_birth"/></h3></td>
+        <td><h3><input type="text" [(ngModel)]="model2.hire_date"/></h3></td>
+        <td><h3><input type="text" [(ngModel)]="model2.address"/></h3></td>
+        <td><h3><input type="text" [(ngModel)]="model2.department"/></h3></td>
+        <td><h3><input type="number" [(ngModel)]="model2.salary"/></h3></td>
+        <td><button type="submit" (click)="create()">add</button></td>
+        
+        </tr>
+
+
+        </tbody>
+
+    </table>
+    <p>Employee ID: </p>
+    <input type="number" [(ngModel)]="empid">
+    <button type="submit" (click)="assignmanager()">add</button>
+</div>
